@@ -26,7 +26,7 @@ def init():
     
     main_color = ''
     while not is_valid_color_input(main_color):
-      rprint("[green bold]Enter main color (accepted formats: Hex, RGB)):[/green bold]")
+      rprint("[green bold]Enter main color (accepted formats: Hex, RGB):[/green bold]")
       main_color = input()
       
     main_color_rgb = to_rgb(main_color)
