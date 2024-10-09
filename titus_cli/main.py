@@ -1,4 +1,5 @@
 import typer
+import os
 import requests
 from PyInquirer import prompt
 from rich import print as rprint
@@ -87,11 +88,25 @@ def init():
     copy_base_css_files()
     css_file_generator(main_color_hex, palette_colors, radius)
     
-    rprint("[green bold]Files generated![/green bold] [cyan]Enjoy Titus![/cyan]")
+    rprint("[green bold]Files generated![/green bold] Enjoy [cyan]Titus![/cyan]")
     
 @app.command("help")
 def help():
   """
   Displays basic use of the Titus toolkit.
   """
-  rprint("[green bold]Help![/green bold]")
+  rprint("[green bold]Enter: [/green bold]")
+  rprint("[cyan]titus init[/cyan]")
+  rprint("[green bold]to generate the Titus system CSS files[/green bold]")
+  rprint("")
+  rprint("[green bold]Enter: [/green bold]")
+  rprint("[red]titus delete[/red]")
+  rprint("[green bold]to delete the Titus system CSS files[/green bold]")
+  
+@app.command("delete")
+def delete():
+  """
+  Deletes Titus system CSS files
+  """
+  os.remove('./titus-system.css')
+  os.remove('./reset.css')
