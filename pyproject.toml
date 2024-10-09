@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "titus-cli"
-version = "0.1.0"
+version = "0.1.1"
 description = "CLI for the Titus CSS toolkit; it generates the base CSS files."
 authors = ["Lucas Sorribes <lucas@luxor.dev>"]
 readme = "README.md"
