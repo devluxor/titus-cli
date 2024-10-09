@@ -2,7 +2,7 @@ import re
 
 MAX_HEX_VALUE = 255
 HEX_FORMAT = r'^\#?[\dabcdef]{6}$'
-RGB_FORMAT = r'^\(?\d{1,3},\s?\d{1,3},\s?\d{1,3}\)?'
+RGB_FORMAT = r'^\(?\d{1,3},\s?\d{1,3},\s?\d{1,3}\)?$'
 
 def is_valid_color_input(color_input: str) -> bool:
   valid_hex = is_valid_hex(color_input)
