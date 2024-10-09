@@ -30,7 +30,7 @@ def increment_letter(letter: str) -> str:
 
 def to_rgb(color: str) -> tuple:
   if is_valid_rgb(color):
-    return color
+    return tuple(extract_values(color))
     
   code = color.lstrip('#')  
   return tuple(int(code[i: i + 2], 16) for i in (0, 2, 4))
